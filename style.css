@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+
+:root {
+    /* COLORS 
+    /* Primary */
+    --desat-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+
+    /* Neutral */
+    --dk-grayish-red: hsl(0, 6%, 24%);
+
+    /* For Gradients (linear, 135 degree) */
+    --gradient1A: hsl(0, 0%, 100%);
+    --gradient1B: hsl(0, 100%, 98%);
+    --gradient2A: hsl(0, 80%, 86%);
+    --gradient2B: hsl(0, 74%, 74%);
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+#content {
+    padding-left: 11.5%;
+    padding-right: 11.5%;
+    padding-top: 4rem;
+    background-image: url('/images/bg-pattern-desktop.svg');
+    background-size: 100%;
+    width: 34%;
+}
+
+.logo {
+    height: 31px;
+}
+
+h1 {
+    margin-top: 8.5rem;
+    font-size: 3.75rem;
+    font-weight: 300;
+    letter-spacing: 1.25rem;
+    line-height: 4rem;
+    color: var(--desat-red);
+}
+
+.bold {
+    font-weight: 600;
+    color: var(--dk-grayish-red);
+}
+
+p {
+    padding-right: 2.5rem;
+    font-size: 1rem;    
+    line-height: 1.6rem;
+    color: var(--desat-red);
+}
+
+#email-form{
+    position: relative;
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 3rem;
+}
+
+input[type=email] {
+    background-image: linear-gradient(135deg, var(--gradient1A), var(--gradient1B));
+    border-radius: 2.5rem;
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    text-indent: 1.5rem;
+    color: var(--dk-grayish-red);
+    box-shadow: none;
+    height: 100%;
+    width: 85%;
+    border: 1px solid var(--desat-red);
+    border-radius: 2.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+input[type=email]:focus {
+
+    outline: none;
+}
+
+input[type=email]::placeholder {
+    color: var(--desat-red);
+    opacity: 1;
+}
+
+.invalid-input{
+    border: 2px solid var(--soft-red) !important;
+}
+
+
+#submit {
+    position: absolute;
+    right: 8%;
+    height: 105%;
+    width: 6.5rem;
+    background-image: linear-gradient(135deg, var(--gradient2A), var(--gradient2B));
+    border-radius: 2.5rem;
+    border: 1px solid var(--desat-red);
+    box-shadow: 0px 10px 20px -5px var(--desat-red);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-image: none;
+    background-color: var(--gradient2A);
+    border: 1px solid var(--gradient2A);
+}
+
+#submit:active {
+
+    box-shadow: 0px 8px 17px -7px var(--desat-red);
+}
+
+#error-message {
+    position: absolute;
+    font-size: 0.875rem;
+    text-indent: 1.5rem;
+    top: 2.75rem;
+}
+
+#error-icon {
+    position: absolute;
+    height: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32%;
+}
+
+.hidden {
+    display: none;
+}
+
+#mobile-portrait {
+    display: none;
+}
+
+#desktop-portrait {
+    width: 43%;
+    background-image: url('/images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100%;   
+}
+
+
+/* Mobile styling */
+
+@media screen and (max-width: 375px) {
+    .logo {
+        margin-left: 2rem;
+        margin-top: 2rem;
+        height: 19px;
+    }
+
+    #mobile-portrait {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    #content {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        background-image: linear-gradient(135deg, var(--gradient1A), var(--gradient1B));
+        background-size: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 4rem;
+        margin-bottom: 0;
+        font-size: 2.6125rem;
+        line-height: 2.6rem;
+        letter-spacing: .6rem;
+        text-align: center;
+    }
+
+    p {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        margin-top: 0.875rem;
+        text-align: center;
+        font-size: .85rem;
+        line-height: 1.4rem;
+    }
+
+    #email-form {
+        margin-top: 2rem;
+        height: 3rem;
+    }
+
+    input[type=email] {
+        top: auto;
+        transform: none;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        font-size: 0.85rem;
+    }
+
+    #submit {
+        right: 8%;
+        width: 4rem;
+    }
+
+    #error-icon {
+        right: 27%;
+    }
+
+    #desktop-portrait {
+        display: none;
+    }
+
+    
+}

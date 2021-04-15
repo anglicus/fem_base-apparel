@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="hero">
+    <div id="content">
+      <img class="logo" src="/images/logo.svg" alt="Base Apparel Logo" />
+      <img id="mobile-portrait" src="/images/hero-mobile.jpg" alt="model portrait">
+      <h1>
+        WE'RE <span class="bold">COMING SOON</span>
+      </h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form id="email-form">
+        <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+        />
+        <button type="submit" id="submit">
+          <img class="submit-icon" src="/images/icon-arrow.svg" />
+        </button>
+        <img id="error-icon" class="hidden" src="/images/icon-error.svg" />
+        <p id="error-message" class="hidden">ERROR</p>
+      </form>
+    </div>
+    <div id="desktop-portrait">
+    </div>
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/anglicus">James English</a>.
+    </p>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
